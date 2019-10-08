@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class good {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] num =new int[10];
+		int[] copy =new int[10];
+		int i=0,j=0,key=1;
+		Scanner ELE = new Scanner (System.in);
+		for (i=0;i<num.length;i++) {
+			num[i]=ELE.nextInt();
+			for(j=0;j<i;j++) {
+				if(num[i]!=num[j])
+					key=1;
+				else {
+					key=0;
+					break;
+				}
+			}
+			if(key==1)
+				System.out.print(num[i]+" ");
+			}
+	}
+
+}
