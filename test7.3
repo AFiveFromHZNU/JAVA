@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class newname {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] array = new int[101];
+		int len=-1,count=0,i=0,j=0,key=0;
+		Scanner ELE = new Scanner(System.in);
+		System.out.print("Enter the integers between 1 and 100 ");
+				for(i=0;i<array.length;i++) {
+					array[i]=ELE.nextInt();
+					len++;
+					if (array[i]==0)
+						break;
+				}
+				for (i=0;i<len;i++) {
+					count=0;
+					for(j=0;j<len;j++) {
+						if(array[i]==array[j]) {
+							count++;
+						}
+					}
+					for(j=0;j<i;j++) {
+						if(array[i]!=array[j])
+						key=0;
+						else {
+						key=1;
+						break;
+						}
+					}
+					if(count==1) 
+						System.out.println(array[i] + " occurs " + count +" time ");
+					else if(count!=1 && key==0){
+						System.out.println(array[i] + " occurs " + count +" times ");
+						}
+					}
+				}
+				}
